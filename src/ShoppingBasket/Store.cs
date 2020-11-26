@@ -31,6 +31,11 @@ namespace ShoppingBasket
             }
         }
 
+        public static void Reset()
+        {
+            _products = new List<Product>();
+        }
+
         public static IList<Product> AllProducts()
         {
             // do not expose the list with products            

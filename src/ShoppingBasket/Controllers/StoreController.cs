@@ -15,6 +15,11 @@ namespace ShoppingBasket.Controllers
             CreateDiscounts();
         }
 
+        public void ResetStore()
+        {
+            Store.Reset();
+        }
+
         private void CreateProducts()
         {
             Product beans = new Product("Beans", 0.65m, UnitType.can);
