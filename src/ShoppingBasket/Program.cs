@@ -25,8 +25,15 @@ namespace ShoppingBasket
             }
 
             Console.WriteLine("Type exit to finish");
-            Console.WriteLine("Products in store: " + string.Join(", ", Store.AllProducts().Select(p => p.Name)));
-
+            Console.WriteLine("Products in store: ");
+            foreach (var product in Store.AllProducts())
+            {
+                Console.WriteLine(product.Name + " " + product.Price.ToUkFormat() + "/" + product.Unit);
+            }
+            Console.WriteLine();
+            Console.WriteLine("To create a basket type the products you want to have it,separate by space.");
+            Console.WriteLine("If you want a product several times, write it as many times as you want.");
+            Console.WriteLine();
 
             while (true)
             {                
